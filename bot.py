@@ -118,6 +118,7 @@ import logging
 from os import getenv
 
 from handlers.register import register_router
+from handlers.shop import shop_router
 
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
@@ -129,6 +130,7 @@ async def main() -> None:
     dp = Dispatcher()
     dp.include_routers(
         register_router,
+        shop_router,
     )
 
     bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))

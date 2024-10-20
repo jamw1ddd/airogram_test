@@ -1,2 +1,1 @@
 # airogram_test
-test
